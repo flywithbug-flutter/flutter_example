@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_examples_example/animated/animation.dart';
 import 'package:flutter_examples_example/decimal.dart';
+import 'package:flutter_examples_example/drop_down_button/drop_down_button.dart';
+import 'package:flutter_examples_example/launcher/launcher.dart';
 import 'package:flutter_examples_example/listview/diffutil_sliver_list.dart';
 import 'package:flutter_examples_example/listview/paint/paint.dart';
 import 'package:flutter_examples_example/listview/reorder_able_list_view.dart';
-import 'package:flutter_examples_example/listview/sliver_animated_list_sample.dart';
+import 'package:flutter_examples_example/sliver/sliver_animated_list_sample.dart';
 import 'package:flutter_examples_example/progress/progress.dart';
 import 'package:flutter_examples_example/slider/slider_page.dart';
 import 'package:flutter_examples_example/tab/tab_control.dart';
+import 'package:flutter_examples_example/toast/toast_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -167,13 +171,83 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SliderWidget(),
+                    builder: (context) => const SliderWidget(),
                   ),
                 );
               },
               child: const Text("slider"),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SliderWidget(),
+                  ),
+                );
+              },
+              child: const Text("ApSlider"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LauncherPage(),
+                  ),
+                );
+              },
+              child: const Text("Launcher"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AnimationPage(),
+                  ),
+                );
+              },
+              child: const Text("Animated"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DropDownButtonPage(),
+                  ),
+                );
+              },
+              child: const Text("DropDownButton"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ToastPage(),
+                  ),
+                );
+              },
+              child: const Text("Toast"),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(

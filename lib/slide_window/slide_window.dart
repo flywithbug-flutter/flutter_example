@@ -46,7 +46,7 @@ class _SlideWindowWidgetState extends State<SlideWindowWidget> {
                     builder: (context) {
                       return Scaffold(
                         body: Container(
-                          color: Color.fromARGB(50, 255, 235, 59),
+                          color: const Color.fromARGB(50, 255, 235, 59),
                         ),
                       );
                     },
